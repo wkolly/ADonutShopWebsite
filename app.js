@@ -24,8 +24,8 @@ db.connect((err) => {
 });
 
 // Start the server
-app.listen(port, () => {
-  console.log(`DonutShopWebsite app listening at http://localhost:${port}`);
+app.listen(3000, () => {
+  console.log(`DonutShopWebsite app listening at ${port}`);
 });
 
 // Serve static files (like CSS)
