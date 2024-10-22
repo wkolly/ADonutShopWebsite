@@ -24,12 +24,9 @@ db.connect((err) => {
 });
 
 // Start the server
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`DonutShopWebsite app listening at port number: ${port}`);
 });
-
-// Serve static files (like CSS)
-app.use(express.static("public"));
 
 // Endpoint to get donuts based on category
 app.get("/donuts", (req, res) => {
