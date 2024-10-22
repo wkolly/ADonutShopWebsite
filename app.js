@@ -12,7 +12,7 @@ app.use(express.static("public"));
 //old connection so i can get will's photos
 // MySQL connection
 const db = mysql.createConnection({
-  host: "milestoneone.cfm06uw2grsj.us-east-2.rds.amazonaws.com",
+  host: "pdcdbinstance.cfm06uw2grsj.us-east-2.rds.amazonaws.com",
   user: "admin",
   password: "Password1",
   database: "donuts",
@@ -24,8 +24,8 @@ db.connect((err) => {
 });
 
 // Start the server
-app.listen(3000, () => {
-  console.log(`DonutShopWebsite app listening at ${port}`);
+app.listen(port, () => {
+  console.log(`DonutShopWebsite app listening at port number: ${port}`);
 });
 
 // Serve static files (like CSS)
